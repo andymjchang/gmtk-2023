@@ -16,7 +16,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 141, 300, 0, 0, 0, 0, 141, 269, 0, 0, 0, 0, 208, 269, 0, 0, 0, 0, 209, 209, 0, 0, 0, 0, 222, 194, 0, 0, 0, 0, 227, 179, 0, 0, 0, 0, 230, 158, 0, 0, 0, 0, 230, 139, 0, 0, 0, 0, 227, 122, 0, 0, 0, 0, 218, 109, 0, 0, 0, 0, 209, 99, 0, 0, 0, 0, 196, 91, 0, 0, 0, 0, 178, 86, 0, 0, 0, 0, 161, 83, 0, 0, 0, 0, 140, 83, 0, 0, 0, 0, 126, 87, 0, 0, 0, 0, 108, 96, 0, 0, 0, 0, 99, 104, 0, 0, 0, 0, 90, 114, 0, 0, 0, 0, 85, 124, 0, 0, 0, 0, 84, 143, 0, 0, 0, 0, 85, 159, 0, 0, 0, 0, 88, 173, 0, 0, 0, 0, 89, 191, 0, 0, 0, 0, 88, 201, 0, 0, 0, 0, 87, 285, 0, 0, 0, 0, 84, 292 )
 }
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" groups=["MainNode"]]
 script = ExtResource( 4 )
 
 [node name="BgTile" type="Sprite" parent="."]
@@ -31,6 +31,7 @@ centered = false
 
 [node name="PlacementDetector" parent="." instance=ExtResource( 5 )]
 position = Vector2( 141, 297 )
+detectorIndex = 1
 
 [node name="PlacementDetector2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 158, 15 )
@@ -52,3 +53,11 @@ loop = false
 curve = SubResource( 2 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Track2"]
+position = Vector2( 141, 300 )
+rotate = false
+loop = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_right = 73.0
+margin_bottom = 65.0
+text = "hp: 10"

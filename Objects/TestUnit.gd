@@ -7,6 +7,13 @@ var speed = 25
 func _physics_process(delta):	
 	# check for end of path
 	if path_follow.unit_offset == 1:
-		queue_free()
+		end_of_path()
 		
 	path_follow.set_offset(path_follow.get_offset() + speed * delta)
+
+func end_of_path():
+	# access the current main node
+	for mainNode in get_tree().get_nodes_in_group("MainNode"):
+		mainNode.update_hp(1)
+	
+	queue_free()
