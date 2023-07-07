@@ -1,3 +1,10 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource path="res://Assets/bg_tile.png" type="Texture" id=1]
+
+[node name="Main" type="Node2D"]
+
+[node name="BgTile" type="Sprite" parent="."]
+scale = Vector2( 30, 30 )
+texture = ExtResource( 1 )
+centered = false
