@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/bg_tile.png" type="Texture" id=1]
 [ext_resource path="res://Objects/PrefabTest.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/placeholder_bg.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/Main.gd" type="Script" id=4]
 [ext_resource path="res://Objects/PlacementDetector.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Objects/TestUnit.tscn" type="PackedScene" id=6]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -46,13 +45,8 @@ curve = SubResource( 1 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Track1"]
 position = Vector2( 157, 2 )
-rotation = 1.5946
 rotate = false
 loop = false
-
-[node name="Node2D" parent="Track1/PathFollow2D" instance=ExtResource( 6 )]
-rotation = -1.5946
-scale = Vector2( 1, 1 )
 
 [node name="Track2" type="Path2D" parent="."]
 curve = SubResource( 2 )
