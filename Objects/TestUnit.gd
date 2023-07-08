@@ -7,7 +7,7 @@ var dmg := 1
 var hp := 5
 
 func _process(delta):	
-	$RichTextLabel.text = str(hp)
+	$RichTextLabel.bbcode_text = "[center]" + str(hp) + "[center]"
 	# check for end of path
 	if path_follow.unit_offset == 1:
 		end_of_path()
