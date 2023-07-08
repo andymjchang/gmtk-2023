@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/bg_tile.png" type="Texture" id=1]
 [ext_resource path="res://Objects/PrefabTest.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/placeholder_bg.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/Main.gd" type="Script" id=4]
 [ext_resource path="res://Objects/PlacementDetector.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Objects/PathFollow2D.tscn" type="PackedScene" id=6]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -42,20 +41,49 @@ detectorIndex = 1
 [node name="EnemyUnits" type="Node2D" parent="."]
 
 [node name="PrefabTest" parent="EnemyUnits" instance=ExtResource( 2 )]
+visible = false
 position = Vector2( 46, 129 )
+
+[node name="PrefabTest2" parent="EnemyUnits" instance=ExtResource( 2 )]
+visible = false
+position = Vector2( 241, 134 )
+
+[node name="PrefabTest3" parent="EnemyUnits" instance=ExtResource( 2 )]
+visible = false
+position = Vector2( 104, 92 )
+
+[node name="PrefabTest4" parent="EnemyUnits" instance=ExtResource( 2 )]
+visible = false
+position = Vector2( 176, 167 )
+
+[node name="PrefabTest5" parent="EnemyUnits" instance=ExtResource( 2 )]
+visible = false
+position = Vector2( 168, 220 )
+
+[node name="PrefabTest6" parent="EnemyUnits" instance=ExtResource( 2 )]
+visible = false
+position = Vector2( 88, 193 )
+
+[node name="PrefabTest7" parent="EnemyUnits" instance=ExtResource( 2 )]
+visible = false
+position = Vector2( 217, 194 )
+
+[node name="PrefabTest8" parent="EnemyUnits" instance=ExtResource( 2 )]
+visible = false
+position = Vector2( 181, 44 )
+
+[node name="PrefabTest9" parent="EnemyUnits" instance=ExtResource( 2 )]
+visible = false
+position = Vector2( 221, 64 )
+
+[node name="PrefabTest10" parent="EnemyUnits" instance=ExtResource( 2 )]
+position = Vector2( 101, 42 )
 
 [node name="Track1" type="Path2D" parent="."]
 curve = SubResource( 1 )
 
-[node name="PathFollow2D" parent="Track1" instance=ExtResource( 6 )]
-
 [node name="Track2" type="Path2D" parent="."]
 curve = SubResource( 2 )
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Track2"]
-position = Vector2( 141, 300 )
-rotate = false
-loop = false
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 margin_right = 73.0
