@@ -19,4 +19,6 @@ func _on_PlacementDetector_pressed():
 
 
 func _on_PlacementDetector2_pressed():
-	$Track2/PathFollow2D.add_child(unitScene.instance())
+	var pathFollowNode = pathFollow2DScene.instance()
+	$Track2.add_child(pathFollowNode)
+	pathFollowNode.add_child(unitScene.instance())
