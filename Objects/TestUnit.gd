@@ -2,9 +2,9 @@ extends KinematicBody2D
 
 onready var path_follow = get_parent()
 
-var speed := 25
+var speed := 30
 var dmg := 1
-var hp := 100
+var hp := 5
 
 func _process(delta):	
 	$RichTextLabel.text = str(hp)
@@ -35,7 +35,7 @@ func take_dmg(p_dmg):
 
 func _on_Area2D_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
 	print(area.get_parent().hit)
-	
+	print(area)
 	if area.is_in_group("BulletNode") and area.get_parent().hit == false:
 		area.get_parent().on_hit(self)
 
