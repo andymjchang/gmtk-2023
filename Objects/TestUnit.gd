@@ -34,8 +34,6 @@ func take_dmg(p_dmg):
 		free_path()
 
 func _on_Area2D_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
-	print(area.get_parent().hit)
-	print(area)
 	if area.is_in_group("BulletNode") and area.get_parent().hit == false:
 		area.get_parent().on_hit(self)
 
