@@ -30,7 +30,6 @@ func _on_PlacementDetector_pressed():
 	$Track1.add_child(pathFollowNode)
 	pathFollowNode.add_child(unitScene.instance())
 
-
 func _on_PlacementDetector2_pressed():
 	var pathFollowNode = pathFollow2DScene.instance()
 	$Track2.add_child(pathFollowNode)
