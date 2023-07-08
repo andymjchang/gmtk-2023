@@ -2,7 +2,7 @@ extends Node2D
 
 var atkSpd = 1
 var bulletDmg = 1
-var bulletSpd = 125
+var bulletSpd = 150
 var bulletNode = preload("res://Objects/Projectile.tscn")
 
 func _ready():

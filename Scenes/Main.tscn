@@ -50,47 +50,49 @@ texture = ExtResource( 7 )
 
 [node name="PrefabTest" parent="EnemyUnits" instance=ExtResource( 2 )]
 visible = false
-position = Vector2( 46, 129 )
+position = Vector2( 65, 139 )
 
 [node name="PrefabTest2" parent="EnemyUnits" instance=ExtResource( 2 )]
 visible = false
-position = Vector2( 241, 134 )
+position = Vector2( 251, 144 )
 
 [node name="PrefabTest3" parent="EnemyUnits" instance=ExtResource( 2 )]
 visible = false
-position = Vector2( 104, 92 )
+position = Vector2( 118, 106 )
 
 [node name="PrefabTest4" parent="EnemyUnits" instance=ExtResource( 2 )]
 visible = false
-position = Vector2( 176, 167 )
+position = Vector2( 195, 183 )
 
 [node name="PrefabTest5" parent="EnemyUnits" instance=ExtResource( 2 )]
 visible = false
-position = Vector2( 168, 220 )
+position = Vector2( 190, 229 )
 
 [node name="PrefabTest6" parent="EnemyUnits" instance=ExtResource( 2 )]
 visible = false
-position = Vector2( 88, 193 )
+position = Vector2( 105, 210 )
 
 [node name="PrefabTest7" parent="EnemyUnits" instance=ExtResource( 2 )]
 visible = false
-position = Vector2( 217, 194 )
+position = Vector2( 229, 207 )
 
 [node name="PrefabTest8" parent="EnemyUnits" instance=ExtResource( 2 )]
 visible = false
-position = Vector2( 181, 44 )
+position = Vector2( 197, 61 )
 
 [node name="PrefabTest9" parent="EnemyUnits" instance=ExtResource( 2 )]
 visible = false
-position = Vector2( 221, 64 )
+position = Vector2( 233, 81 )
 
 [node name="PrefabTest10" parent="EnemyUnits" instance=ExtResource( 2 )]
-position = Vector2( 101, 42 )
+visible = false
+position = Vector2( 114, 58 )
 
 [node name="Track1" type="Path2D" parent="."]
 curve = SubResource( 1 )
 
 [node name="Track2" type="Path2D" parent="."]
+visible = false
 curve = SubResource( 2 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]

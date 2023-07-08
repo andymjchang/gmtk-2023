@@ -1,7 +1,6 @@
 extends Node2D
 
 var unitScene = preload("res://Objects/TestUnit.tscn")
-var pathFollow2DScene = preload("res://Objects/PathFollow2D.tscn")
 var enemyHP := 10
 
 func _ready():
@@ -23,14 +22,10 @@ func new_tower():
 
 func upgrade_tower(towerNode):
 	print(towerNode.name + "dmg + 1")
-	towerNode.dmg += 1
+	towerNode.bulletDmg += 1
 	
 func _on_PlacementDetector_pressed():
-	var pathFollowNode = pathFollow2DScene.instance()
-	$Track1.add_child(pathFollowNode)
-	pathFollowNode.add_child(unitScene.instance())
+	$Track1.add_child(unitScene.instance())
 
 func _on_PlacementDetector2_pressed():
-	var pathFollowNode = pathFollow2DScene.instance()
-	$Track2.add_child(pathFollowNode)
-	pathFollowNode.add_child(unitScene.instance())
+	$Track2.add_child(unitScene.instance())
