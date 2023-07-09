@@ -12,8 +12,9 @@ func _ready():
 	$Sprite2D.speed_scale = rand_range(0.8, 1.2)
 	last_position = global_position
 
-func initialize():
-	pass
+func initialize(colorName, p_dmg, p_speed):
+	var modulateColor = ColorN(colorName, 1)
+	$Sprite2D.modulate = modulateColor
 
 func _process(delta):
 	# check for death

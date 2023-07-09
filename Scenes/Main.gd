@@ -44,7 +44,9 @@ func upgrade_tower(towerNode):
 
 func place_unit(p_cost):
 	if playerGold >= p_cost:
-		trackID.add_child(unitScene.instance())
+		var child = unitScene.instance()
+		trackID.add_child(child)
+		child.get_node("PlayerUnit").initialize("darkblue", 1, 30)
 		playerGold -= p_cost
 		
 func _on_WaveTimer_timeout():
