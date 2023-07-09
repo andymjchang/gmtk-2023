@@ -9,6 +9,9 @@ var colorType = "white"
 func _ready():
 	$Timer.start()
 	
+	# pick random frame but not frame 0
+	$Sprite.frame = (randi() % 4) + 1
+	
 func modulate_color():
 	$Sprite.material.set_shader_param("outline_color", ColorN(colorType, 1))
 

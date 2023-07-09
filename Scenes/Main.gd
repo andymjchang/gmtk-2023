@@ -6,7 +6,7 @@ var enemyHP := 10
 var playerGold := 100
 var currentWave := 0
 var totalWaves := 15
-var elementArray = ["red", "green", "blue"]
+var elementArray = ["red", "darkgreen", "blue"]
 onready var trackID = get_node("Track1")
 
 func _ready():
@@ -46,7 +46,11 @@ func upgrade_tower(towerNode):
 	if towerNode.colorType == "white":
 		towerNode.colorType = elementArray[randi() % 3]
 		towerNode.modulate_color()
-		print(towerNode.colorType)
+	elif towerNode.get_node("Sprite").frame > 0: # not crowned yet
+		towerNode.get_node("Sprite").frame = 0
+	else: #pick another tower
+		new_tower()
+		
 
 func place_unit(p_cost, p_color):
 	if playerGold >= p_cost:
