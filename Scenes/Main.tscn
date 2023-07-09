@@ -262,8 +262,18 @@ text = "HOVER UNIT FOR DETAILS
 "
 
 [connection signal="pressed" from="PlacementDetectorGroup/RatButton1" to="." method="_on_RatButton1_pressed"]
+[connection signal="mouse_entered" from="PlacementDetectorGroup/RatButton1/Area2D" to="." method="_on_Area2D_mouse_entered_white"]
 [connection signal="pressed" from="PlacementDetectorGroup/RatButton2" to="." method="_on_RatButton2_pressed"]
+[connection signal="mouse_entered" from="PlacementDetectorGroup/RatButton2/Area2D" to="." method="_on_Area2D_mouse_entered_green"]
 [connection signal="pressed" from="PlacementDetectorGroup/RatBuutton3" to="." method="_on_RatBuutton3_pressed"]
+[connection signal="mouse_entered" from="PlacementDetectorGroup/RatBuutton3/Area2D" to="." method="_on_Area2D_mouse_entered_blue"]
 [connection signal="pressed" from="PlacementDetectorGroup/RatButton4" to="." method="_on_RatButton4_pressed"]
+[connection signal="mouse_entered" from="PlacementDetectorGroup/RatButton4/Area2D" to="." method="_on_Area2D_mouse_entered_red"]
 [connection signal="input_event" from="PlacementDetectorGroup/Toggle/ToggleArea2D" to="." method="_on_ToggleArea2D_input_event"]
+[connection signal="mouse_entered" from="PlacementDetectorGroup/Toggle/ToggleArea2D" to="." method="_on_ToggleArea2D_mouse_entered"]
 [connection signal="timeout" from="WaveTimer" to="." method="_on_WaveTimer_timeout"]
+
+[editable path="PlacementDetectorGroup/RatButton1"]
+[editable path="PlacementDetectorGroup/RatButton2"]
+[editable path="PlacementDetectorGroup/RatBuutton3"]
+[editable path="PlacementDetectorGroup/RatButton4"]

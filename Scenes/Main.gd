@@ -1,5 +1,8 @@
 extends Node2D
 
+var ratDmg = [1, 2, 2, 2]
+
+
 var unitScene = preload("res://Objects/TestUnit.tscn")
 onready var toggleNode = get_node("PlacementDetectorGroup/Toggle")
 var enemyHP := 10
@@ -83,3 +86,21 @@ func _on_ToggleArea2D_input_event(_viewport, _event, _shape_idx):
 		else: 
 			toggleNode.frame = 0
 			trackID = get_node("Track1")
+
+
+
+func _on_ToggleArea2D_mouse_entered():
+	$UnitPortrait.load_info("rat", "Toggle between spawn locations", 0)
+
+func _on_Area2D_mouse_entered_white():
+	$UnitPortrait.load_info("rat", "Wind Rat", ratDmg[0]) 
+
+
+func _on_Area2D_mouse_entered_green():
+	$UnitPortrait.load_info("rat", "Grass Rat", ratDmg[1]) 
+
+func _on_Area2D_mouse_entered_blue():
+	$UnitPortrait.load_info("rat", "Water Rat", ratDmg[2]) 
+
+func _on_Area2D_mouse_entered_red():
+	$UnitPortrait.load_info("rat", "Fire Rat", ratDmg[3]) 
