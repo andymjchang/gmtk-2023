@@ -20,11 +20,12 @@ _data = {
 }
 
 [node name="Main" type="Node2D" groups=["MainNode"]]
+position = Vector2( 50, 0 )
 script = ExtResource( 4 )
 
 [node name="BgTile" type="Sprite" parent="."]
-visible = false
-scale = Vector2( 9.75, 9.75 )
+position = Vector2( -50, -1 )
+scale = Vector2( 12.5938, 9.46875 )
 texture = ExtResource( 1 )
 centered = false
 
@@ -96,12 +97,17 @@ curve = SubResource( 1 )
 curve = SubResource( 2 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 10.0
+margin_left = -40.0
 margin_top = 10.0
-margin_right = 117.0
-margin_bottom = 65.0
+margin_right = 67.0
+margin_bottom = 102.0
 custom_fonts/normal_font = ExtResource( 8 )
 text = "HP:10"
 
+[node name="WaveTimer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
 [connection signal="pressed" from="PlacementDetectorGroup/PlacementDetector" to="." method="_on_PlacementDetector_pressed"]
 [connection signal="pressed" from="PlacementDetectorGroup/PlacementDetector2" to="." method="_on_PlacementDetector2_pressed"]
+[connection signal="timeout" from="WaveTimer" to="." method="_on_WaveTimer_timeout"]

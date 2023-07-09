@@ -3,19 +3,30 @@ extends Node2D
 var unitScene = preload("res://Objects/TestUnit.tscn")
 var enemyHP := 10
 var playerGold := 100
+var currentWave := 0
+var totalWaves := 15
 
 func _ready():
-	update_stats()
 	randomize()
 	$BgTile.visible = true
-	new_tower()
+
+func _process(_delta):
+	update_stats()
 
 func update_stats():
 	$RichTextLabel.text = "HP:" + str(enemyHP) + "\nGOLD:" + str(playerGold)
+	$RichTextLabel.text = $RichTextLabel.text + "\nWAVE:" + str(currentWave) + "/" + str(totalWaves)
+	$RichTextLabel.text = $RichTextLabel.text + "\nNEXT:" + str($WaveTimer.time_left)
 
 func update_hp(subtractAmount):
 	enemyHP -= subtractAmount
-	update_stats()
+
+func new_wave():
+	if currentWave < totalWaves:
+		currentWave += 1
+		new_tower()
+		playerGold += 100
+	
 
 func new_tower():
 	var towerArray = $EnemyUnits.get_children()
@@ -33,10 +44,12 @@ func place_unit(track):
 	if playerGold >= 10:
 		track.add_child(unitScene.instance())
 		playerGold -= 10
-		update_stats()
 		
 func _on_PlacementDetector_pressed():
 	place_unit($Track1)
 
 func _on_PlacementDetector2_pressed():
 	place_unit($Track2)
+
+func _on_WaveTimer_timeout():
+	new_wave()
