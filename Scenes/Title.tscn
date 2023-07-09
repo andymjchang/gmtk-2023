@@ -1,0 +1,313 @@
+[gd_scene load_steps=61 format=2]
+
+[ext_resource path="res://Assets/horizontally-spinning-rat.png" type="Texture" id=1]
+[ext_resource path="res://Assets/bg_tile.png" type="Texture" id=2]
+[ext_resource path="res://Resources/default_font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Assets/PressStart2P-vaV7.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Assets/play_button.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Title.gd" type="Script" id=6]
+[ext_resource path="res://Assets/green_tile_filter.png" type="Texture" id=7]
+[ext_resource path="res://Objects/PlacementDetector.gd" type="Script" id=8]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 200, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 400, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 600, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 1 )
+region = Rect2( 800, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 1 )
+region = Rect2( 1000, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 1 )
+region = Rect2( 1200, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 1 )
+region = Rect2( 1400, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 1 )
+region = Rect2( 1600, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 1 )
+region = Rect2( 1800, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 1 )
+region = Rect2( 2000, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 1 )
+region = Rect2( 2200, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 1 )
+region = Rect2( 2400, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 1 )
+region = Rect2( 2600, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 1 )
+region = Rect2( 2800, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 1 )
+region = Rect2( 3000, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 1 )
+region = Rect2( 3200, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 1 )
+region = Rect2( 3400, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 1 )
+region = Rect2( 3600, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 1 )
+region = Rect2( 3800, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 1 )
+region = Rect2( 4000, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 1 )
+region = Rect2( 4200, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 1 )
+region = Rect2( 4400, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 1 )
+region = Rect2( 4600, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 1 )
+region = Rect2( 4800, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 1 )
+region = Rect2( 5000, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 1 )
+region = Rect2( 5200, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 1 )
+region = Rect2( 5400, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 1 )
+region = Rect2( 5600, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 1 )
+region = Rect2( 5800, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 1 )
+region = Rect2( 6000, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 1 )
+region = Rect2( 6200, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 1 )
+region = Rect2( 6400, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 1 )
+region = Rect2( 6600, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 1 )
+region = Rect2( 6800, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 1 )
+region = Rect2( 7000, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 1 )
+region = Rect2( 7200, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 1 )
+region = Rect2( 7400, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 1 )
+region = Rect2( 7600, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 1 )
+region = Rect2( 7800, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 1 )
+region = Rect2( 8000, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 1 )
+region = Rect2( 8200, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 1 )
+region = Rect2( 8400, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=44]
+atlas = ExtResource( 1 )
+region = Rect2( 8600, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 1 )
+region = Rect2( 8800, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=46]
+atlas = ExtResource( 1 )
+region = Rect2( 9000, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=47]
+atlas = ExtResource( 1 )
+region = Rect2( 9200, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=48]
+atlas = ExtResource( 1 )
+region = Rect2( 9400, 0, 200, 100 )
+
+[sub_resource type="AtlasTexture" id=49]
+atlas = ExtResource( 1 )
+region = Rect2( 9600, 0, 200, 100 )
+
+[sub_resource type="SpriteFrames" id=50]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+} ]
+
+[sub_resource type="DynamicFont" id=51]
+size = 36
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_top = 1
+font_data = ExtResource( 4 )
+
+[sub_resource type="RectangleShape2D" id=52]
+extents = Vector2( 21, 9 )
+
+[node name="Title" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="BgTile" type="Sprite" parent="."]
+scale = Vector2( 12.5313, 9.46875 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 192, 174 )
+frames = SubResource( 50 )
+frame = 10
+speed_scale = 2.0
+playing = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_top = 12.0
+margin_right = 400.0
+margin_bottom = 155.0
+custom_fonts/normal_font = SubResource( 51 )
+bbcode_enabled = true
+bbcode_text = "[center]RATS
+VS
+CATS"
+text = "RATS
+VS
+CATS"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+margin_top = 132.0
+margin_right = 400.0
+margin_bottom = 145.0
+custom_fonts/normal_font = ExtResource( 3 )
+bbcode_enabled = true
+bbcode_text = "[center]Reverse Tower Defense"
+text = "Reverse Tower Defense"
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="."]
+margin_top = 228.0
+margin_right = 400.0
+margin_bottom = 241.0
+mouse_filter = 2
+custom_fonts/normal_font = ExtResource( 3 )
+bbcode_enabled = true
+bbcode_text = "[center]PLAY"
+text = "PLAY"
+
+[node name="PlayButton" type="Sprite" parent="."]
+position = Vector2( 199, 233 )
+texture = ExtResource( 5 )
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+margin_left = 4.0
+margin_top = 268.0
+margin_right = 404.0
+margin_bottom = 343.0
+custom_fonts/normal_font = ExtResource( 3 )
+bbcode_enabled = true
+bbcode_text = "Created for GMTK 2023
+Andy Chang
+Maryanne Park"
+text = "Created for GMTK 2023
+Andy Chang
+Maryanne Park"
+
+[node name="PlacementDetector" type="Node2D" parent="."]
+position = Vector2( 199, 232 )
+script = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="PlacementDetector"]
+visible = false
+position = Vector2( 1.90735e-06, 0.999996 )
+scale = Vector2( 1.29032, 0.451613 )
+texture = ExtResource( 7 )
+
+[node name="Area2D" type="Area2D" parent="PlacementDetector"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementDetector/Area2D"]
+position = Vector2( 0, 1 )
+shape = SubResource( 52 )
+
+[node name="Timer" type="Timer" parent="PlacementDetector"]
+wait_time = 0.1
+one_shot = true
+
+[connection signal="pressed" from="PlacementDetector" to="." method="_on_PlacementDetector_pressed"]
+[connection signal="input_event" from="PlacementDetector/Area2D" to="PlacementDetector" method="_on_Area2D_input_event"]
+[connection signal="timeout" from="PlacementDetector/Timer" to="PlacementDetector" method="_on_Timer_timeout"]
