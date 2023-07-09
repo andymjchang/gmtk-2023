@@ -4,4 +4,4 @@
 
 [node name="UnitPortrait" type="AnimatedSprite"]
 frames = ExtResource( 1 )
-animation = "white"
+animation = "blue"
