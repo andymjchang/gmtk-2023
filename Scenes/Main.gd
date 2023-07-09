@@ -34,6 +34,10 @@ func new_wave():
 		currentWave += 1
 		new_tower()
 		playerGold = 100 * currentWave
+	elif enemyHP <= 0:
+		get_tree().change_scene("res://Scenes/VictoryScreen.tscn")
+	else:
+		get_tree().change_scene("res://Scenes/DefeatScreen.tscn")
 	
 
 func new_tower():
@@ -105,3 +109,7 @@ func _on_Area2D_mouse_entered_blue():
 
 func _on_Area2D_mouse_entered_red():
 	$UnitPortrait.load_info("rat", "Fire Rat", ratDmg[3]) 
+
+func _on_ForwardButtonDetector_pressed():
+	new_wave()
+	$WaveTimer.start()
