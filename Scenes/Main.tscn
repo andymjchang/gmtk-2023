@@ -5,7 +5,7 @@
 [ext_resource path="res://Assets/placeholder_bg.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/Main.gd" type="Script" id=4]
 [ext_resource path="res://Objects/PlacementDetector.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Assets/placeholder_object3.png" type="Texture" id=6]
+[ext_resource path="res://Assets/placeholder_object_sheet.png" type="Texture" id=6]
 [ext_resource path="res://Assets/placeholder_object2.png" type="Texture" id=7]
 [ext_resource path="res://Resources/default_font.tres" type="DynamicFont" id=8]
 
@@ -25,7 +25,7 @@ script = ExtResource( 4 )
 
 [node name="BgTile" type="Sprite" parent="."]
 position = Vector2( -50, -1 )
-scale = Vector2( 12.5938, 9.46875 )
+scale = Vector2( 12.5313, 9.46875 )
 texture = ExtResource( 1 )
 centered = false
 
@@ -35,18 +35,43 @@ centered = false
 
 [node name="PlacementDetectorGroup" type="Node2D" parent="."]
 
-[node name="PlacementDetector" parent="PlacementDetectorGroup" instance=ExtResource( 5 )]
-position = Vector2( 17, 250 )
-
-[node name="PlaceholderObject3" type="Sprite" parent="PlacementDetectorGroup/PlacementDetector"]
-texture = ExtResource( 6 )
-
-[node name="PlacementDetector2" parent="PlacementDetectorGroup" instance=ExtResource( 5 )]
-position = Vector2( 17, 283 )
+[node name="CatButton" parent="PlacementDetectorGroup" instance=ExtResource( 5 )]
+position = Vector2( -28, 278 )
 detectorIndex = 1
 
-[node name="PlaceholderObject2" type="Sprite" parent="PlacementDetectorGroup/PlacementDetector2"]
+[node name="PlaceholderObject2" type="Sprite" parent="PlacementDetectorGroup/CatButton"]
 texture = ExtResource( 7 )
+
+[node name="RatButton1" parent="PlacementDetectorGroup" instance=ExtResource( 5 )]
+position = Vector2( 286, 24 )
+
+[node name="PlaceholderObject3" type="Sprite" parent="PlacementDetectorGroup/RatButton1"]
+texture = ExtResource( 6 )
+hframes = 4
+
+[node name="RatButton2" parent="PlacementDetectorGroup" instance=ExtResource( 5 )]
+position = Vector2( 323, 24 )
+
+[node name="PlaceholderObjectSheet" type="Sprite" parent="PlacementDetectorGroup/RatButton2"]
+texture = ExtResource( 6 )
+hframes = 4
+frame = 1
+
+[node name="RatBuutton3" parent="PlacementDetectorGroup" instance=ExtResource( 5 )]
+position = Vector2( 286, 59 )
+
+[node name="PlaceholderObjectSheet" type="Sprite" parent="PlacementDetectorGroup/RatBuutton3"]
+texture = ExtResource( 6 )
+hframes = 4
+frame = 2
+
+[node name="RatButton4" parent="PlacementDetectorGroup" instance=ExtResource( 5 )]
+position = Vector2( 323, 59 )
+
+[node name="PlaceholderObjectSheet" type="Sprite" parent="PlacementDetectorGroup/RatButton4"]
+texture = ExtResource( 6 )
+hframes = 4
+frame = 3
 
 [node name="EnemyUnits" type="Node2D" parent="."]
 
@@ -108,6 +133,9 @@ text = "HP:10"
 wait_time = 10.0
 autostart = true
 
-[connection signal="pressed" from="PlacementDetectorGroup/PlacementDetector" to="." method="_on_PlacementDetector_pressed"]
-[connection signal="pressed" from="PlacementDetectorGroup/PlacementDetector2" to="." method="_on_PlacementDetector2_pressed"]
+[connection signal="pressed" from="PlacementDetectorGroup/CatButton" to="." method="_on_PlacementDetector2_pressed"]
+[connection signal="pressed" from="PlacementDetectorGroup/RatButton1" to="." method="_on_PlacementDetector_pressed"]
+[connection signal="pressed" from="PlacementDetectorGroup/RatButton2" to="." method="_on_PlacementDetector_pressed"]
+[connection signal="pressed" from="PlacementDetectorGroup/RatBuutton3" to="." method="_on_PlacementDetector_pressed"]
+[connection signal="pressed" from="PlacementDetectorGroup/RatButton4" to="." method="_on_PlacementDetector_pressed"]
 [connection signal="timeout" from="WaveTimer" to="." method="_on_WaveTimer_timeout"]

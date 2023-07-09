@@ -6,7 +6,7 @@ var speed := 30
 var dmg := 1
 var hp := 5
 var last_position
-export var turn_threshold := 1
+export var turn_threshold := 0.15
 
 func _ready():
 	$Sprite2D.speed_scale = rand_range(0.8, 1.2)
