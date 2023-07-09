@@ -9,6 +9,8 @@ var colorType = "white"
 func _ready():
 	$Timer.start()
 	
+func modulate_color():
+	$Sprite.material.set_shader_param("outline_color", ColorN(colorType, 1))
 
 func find_closest_target():
 	var unitArray = get_tree().get_nodes_in_group("UnitNode")
