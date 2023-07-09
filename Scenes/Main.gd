@@ -1,14 +1,16 @@
 extends Node2D
 
-var ratDmg = [1, 2, 2, 2]
+var ratDmg = [1, 3, 3, 3]
 var ratHp = [5, 10, 10, 10]
 var baseGold = 100
+var ratSpeed := 30
 
+var augmentScene = preload("res://Scenes/AugmentScreen.tscn")
 var unitScene = preload("res://Objects/TestUnit.tscn")
 onready var toggleNode = get_node("PlacementDetectorGroup/Toggle")
 var enemyHP := 10
 var playerGold := 100
-var currentWave := 0
+var currentWave := 1
 var totalWaves := 10
 var elementArray = ["red", "darkgreen", "blue"]
 onready var trackID = get_node("Track1")
@@ -33,7 +35,8 @@ func new_wave():
 	if currentWave < totalWaves:
 		currentWave += 1
 		new_tower()
-		playerGold = 100 * currentWave
+		playerGold = 100 + 100 * currentWave
+		add_child(augmentScene.instance())
 	elif enemyHP <= 0:
 		get_tree().change_scene("res://Scenes/VictoryScreen.tscn")
 	else:
@@ -68,7 +71,7 @@ func place_unit(p_cost, p_color, p_dmg, p_hp):
 	if playerGold >= p_cost:
 		var child = unitScene.instance()
 		trackID.add_child(child)
-		child.get_node("PlayerUnit").initialize(p_color, p_dmg, 30, p_hp)
+		child.get_node("PlayerUnit").initialize(p_color, p_dmg, ratSpeed, p_hp)
 		playerGold -= p_cost
 		
 func _on_WaveTimer_timeout():
