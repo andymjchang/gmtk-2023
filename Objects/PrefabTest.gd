@@ -4,9 +4,11 @@ var atkSpd = 1
 var bulletDmg = 1
 var bulletSpd = 300
 var bulletNode = preload("res://Objects/Projectile.tscn")
+var colorType = "white"
 
 func _ready():
 	$Timer.start()
+	
 
 func find_closest_target():
 	var unitArray = get_tree().get_nodes_in_group("UnitNode")
@@ -16,7 +18,7 @@ func find_closest_target():
 		dirVector = dirVector.normalized()
 		var bulletInstance = bulletNode.instance()
 		add_child(bulletInstance)
-		bulletInstance.initialize(dirVector, bulletSpd, bulletDmg)
+		bulletInstance.initialize(dirVector, bulletSpd, bulletDmg, colorType)
 
 func _on_Timer_timeout():
 	find_closest_target()

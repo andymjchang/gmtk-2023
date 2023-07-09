@@ -5,10 +5,11 @@ var spd
 var dmg
 var hit := false
 
-func initialize(p_direction, p_speed, p_damage):
+func initialize(p_direction, p_speed, p_damage, p_color):
 	direction = p_direction
 	spd = p_speed
 	dmg = p_damage
+	$Sprite.modulate = ColorN(p_color, 1)
 
 func _process(delta):
 	position = position + spd * direction * delta

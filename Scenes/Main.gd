@@ -16,7 +16,8 @@ func _process(_delta):
 	update_stats()
 
 func update_stats():
-	$RichTextLabel.text = "HP:" + str(enemyHP) + "\nGOLD:" + str(playerGold)
+	$HPLabel.text = "HP:" + str(enemyHP)
+	$RichTextLabel.text = "GOLD:" + str(playerGold)
 	$RichTextLabel.text = $RichTextLabel.text + "\nWAVE:" + str(currentWave) + "/" + str(totalWaves)
 	$RichTextLabel.text = $RichTextLabel.text + "\nNEXT:" + str($WaveTimer.time_left)
 
@@ -42,24 +43,24 @@ func upgrade_tower(towerNode):
 	print(towerNode.name + "dmg + 1")
 	towerNode.bulletDmg += 1
 
-func place_unit(p_cost):
+func place_unit(p_cost, p_color):
 	if playerGold >= p_cost:
 		var child = unitScene.instance()
 		trackID.add_child(child)
-		child.get_node("PlayerUnit").initialize("darkblue", 1, 30)
+		child.get_node("PlayerUnit").initialize(p_color, 1, 30)
 		playerGold -= p_cost
 		
 func _on_WaveTimer_timeout():
 	new_wave()
 
 func _on_RatButton1_pressed():
-	place_unit(50)
+	place_unit(50, "white")
 func _on_RatButton2_pressed():
-	place_unit(150)
+	place_unit(150, "green")
 func _on_RatBuutton3_pressed():
-	place_unit(150)
+	place_unit(150, "blue")
 func _on_RatButton4_pressed():
-	place_unit(150)
+	place_unit(150, "red")
 
 func _on_ToggleArea2D_input_event(_viewport, _event, _shape_idx):
 	if Input.is_action_just_pressed("mouse_left"):

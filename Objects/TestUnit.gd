@@ -13,8 +13,7 @@ func _ready():
 	last_position = global_position
 
 func initialize(colorName, p_dmg, p_speed):
-	var modulateColor = ColorN(colorName, 1)
-	$Sprite2D.modulate = modulateColor
+	$Sprite2D.modulate = ColorN(colorName, 1)
 
 func _process(delta):
 	# check for death
