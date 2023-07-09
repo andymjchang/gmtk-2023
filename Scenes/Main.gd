@@ -1,6 +1,7 @@
 extends Node2D
 
 var unitScene = preload("res://Objects/TestUnit.tscn")
+onready var toggleNode = get_node("PlacementDetectorGroup/Toggle")
 var enemyHP := 10
 var playerGold := 100
 var currentWave := 0
@@ -57,5 +58,9 @@ func _on_RatBuutton3_pressed():
 func _on_RatButton4_pressed():
 	place_unit($Track1, 150)
 
-
-
+func _on_ToggleArea2D_input_event(_viewport, _event, _shape_idx):
+	if Input.is_action_just_pressed("mouse_left"):
+		if toggleNode.frame == 0:
+			toggleNode.frame = 1
+		else: 
+			toggleNode.frame = 0
