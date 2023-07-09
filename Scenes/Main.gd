@@ -1,7 +1,8 @@
 extends Node2D
 
 var ratDmg = [1, 2, 2, 2]
-
+var ratHp = [5, 10, 10, 10]
+var baseGold = 100
 
 var unitScene = preload("res://Objects/TestUnit.tscn")
 onready var toggleNode = get_node("PlacementDetectorGroup/Toggle")
@@ -32,7 +33,7 @@ func new_wave():
 	if currentWave < totalWaves:
 		currentWave += 1
 		new_tower()
-		playerGold += 50 * currentWave
+		playerGold = 100 * currentWave
 	
 
 func new_tower():
