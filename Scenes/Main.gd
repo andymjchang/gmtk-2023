@@ -5,7 +5,7 @@ onready var toggleNode = get_node("PlacementDetectorGroup/Toggle")
 var enemyHP := 10
 var playerGold := 100
 var currentWave := 0
-var totalWaves := 15
+var totalWaves := 10
 var elementArray = ["red", "darkgreen", "blue"]
 onready var trackID = get_node("Track1")
 
@@ -29,7 +29,7 @@ func new_wave():
 	if currentWave < totalWaves:
 		currentWave += 1
 		new_tower()
-		playerGold += 100
+		playerGold += 50 * currentWave
 	
 
 func new_tower():
