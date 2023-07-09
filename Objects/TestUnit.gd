@@ -12,6 +12,9 @@ func _ready():
 	$Sprite2D.speed_scale = rand_range(0.8, 1.2)
 	last_position = global_position
 
+func initialize():
+	pass
+
 func _process(delta):
 	# check for death
 	if hp <= 0:

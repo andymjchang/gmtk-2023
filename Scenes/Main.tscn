@@ -49,6 +49,16 @@ position = Vector2( 286, 24 )
 texture = ExtResource( 6 )
 hframes = 4
 
+[node name="RichTextLabel" type="RichTextLabel" parent="PlacementDetectorGroup/RatButton1"]
+margin_left = -16.0
+margin_top = 16.0
+margin_right = 16.0
+margin_bottom = 39.0
+custom_fonts/normal_font = ExtResource( 8 )
+bbcode_enabled = true
+bbcode_text = "[center]$50[center]"
+text = "$50"
+
 [node name="RatButton2" parent="PlacementDetectorGroup" instance=ExtResource( 5 )]
 position = Vector2( 323, 24 )
 
@@ -57,21 +67,51 @@ texture = ExtResource( 6 )
 hframes = 4
 frame = 1
 
+[node name="RichTextLabel" type="RichTextLabel" parent="PlacementDetectorGroup/RatButton2"]
+margin_left = -16.0
+margin_top = 16.0
+margin_right = 16.0
+margin_bottom = 39.0
+custom_fonts/normal_font = ExtResource( 8 )
+bbcode_enabled = true
+bbcode_text = "[center]$150[center]"
+text = "$150"
+
 [node name="RatBuutton3" parent="PlacementDetectorGroup" instance=ExtResource( 5 )]
-position = Vector2( 286, 59 )
+position = Vector2( 286, 68 )
 
 [node name="PlaceholderObjectSheet" type="Sprite" parent="PlacementDetectorGroup/RatBuutton3"]
 texture = ExtResource( 6 )
 hframes = 4
 frame = 2
 
+[node name="RichTextLabel" type="RichTextLabel" parent="PlacementDetectorGroup/RatBuutton3"]
+margin_left = -16.0
+margin_top = 16.0
+margin_right = 16.0
+margin_bottom = 39.0
+custom_fonts/normal_font = ExtResource( 8 )
+bbcode_enabled = true
+bbcode_text = "[center]$150[center]"
+text = "$150"
+
 [node name="RatButton4" parent="PlacementDetectorGroup" instance=ExtResource( 5 )]
-position = Vector2( 323, 59 )
+position = Vector2( 323, 68 )
 
 [node name="PlaceholderObjectSheet" type="Sprite" parent="PlacementDetectorGroup/RatButton4"]
 texture = ExtResource( 6 )
 hframes = 4
 frame = 3
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="PlacementDetectorGroup/RatButton4"]
+margin_left = -16.0
+margin_top = 16.0
+margin_right = 16.0
+margin_bottom = 39.0
+custom_fonts/normal_font = ExtResource( 8 )
+bbcode_enabled = true
+bbcode_text = "[center]$150[center]"
+text = "$150"
 
 [node name="EnemyUnits" type="Node2D" parent="."]
 
@@ -133,9 +173,8 @@ text = "HP:10"
 wait_time = 10.0
 autostart = true
 
-[connection signal="pressed" from="PlacementDetectorGroup/CatButton" to="." method="_on_PlacementDetector2_pressed"]
-[connection signal="pressed" from="PlacementDetectorGroup/RatButton1" to="." method="_on_PlacementDetector_pressed"]
-[connection signal="pressed" from="PlacementDetectorGroup/RatButton2" to="." method="_on_PlacementDetector_pressed"]
-[connection signal="pressed" from="PlacementDetectorGroup/RatBuutton3" to="." method="_on_PlacementDetector_pressed"]
-[connection signal="pressed" from="PlacementDetectorGroup/RatButton4" to="." method="_on_PlacementDetector_pressed"]
+[connection signal="pressed" from="PlacementDetectorGroup/RatButton1" to="." method="_on_RatButton1_pressed"]
+[connection signal="pressed" from="PlacementDetectorGroup/RatButton2" to="." method="_on_RatButton2_pressed"]
+[connection signal="pressed" from="PlacementDetectorGroup/RatBuutton3" to="." method="_on_RatBuutton3_pressed"]
+[connection signal="pressed" from="PlacementDetectorGroup/RatButton4" to="." method="_on_RatButton4_pressed"]
 [connection signal="timeout" from="WaveTimer" to="." method="_on_WaveTimer_timeout"]

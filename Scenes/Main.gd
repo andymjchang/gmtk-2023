@@ -40,16 +40,22 @@ func upgrade_tower(towerNode):
 	print(towerNode.name + "dmg + 1")
 	towerNode.bulletDmg += 1
 
-func place_unit(track):
-	if playerGold >= 10:
+func place_unit(track, p_cost):
+	if playerGold >= p_cost:
 		track.add_child(unitScene.instance())
-		playerGold -= 10
+		playerGold -= p_cost
 		
-func _on_PlacementDetector_pressed():
-	place_unit($Track1)
-
-func _on_PlacementDetector2_pressed():
-	place_unit($Track2)
-
 func _on_WaveTimer_timeout():
 	new_wave()
+
+func _on_RatButton1_pressed():
+	place_unit($Track1, 50)
+func _on_RatButton2_pressed():
+	place_unit($Track1, 150)
+func _on_RatBuutton3_pressed():
+	place_unit($Track1, 150)
+func _on_RatButton4_pressed():
+	place_unit($Track1, 150)
+
+
+
