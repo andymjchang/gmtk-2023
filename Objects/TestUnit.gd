@@ -4,9 +4,10 @@ onready var path_follow = get_parent()
 
 var speed := 30
 var dmg := 1
-var hp := 5
+var hp := 10
 var last_position
 export var turn_threshold := 0.15
+var colorType = "white"
 
 func _ready():
 	$Sprite2D.speed_scale = rand_range(0.8, 1.2)
@@ -14,6 +15,7 @@ func _ready():
 
 func initialize(colorName, p_dmg, p_speed):
 	$Sprite2D.modulate = ColorN(colorName, 1)
+	colorType = colorName
 
 func _process(delta):
 	# check for death
@@ -55,5 +57,5 @@ func take_dmg(p_dmg):
 
 func _on_Area2D_area_shape_entered(_area_rid, area, _area_shape_index, _local_shape_index):
 	if area.is_in_group("BulletNode") and area.get_parent().hit == false:
-		area.get_parent().on_hit(self)
+		area.get_parent().on_hit(self, colorType)
 
