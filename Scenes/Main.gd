@@ -45,9 +45,13 @@ func upgrade_tower(towerNode):
 	# three stages of tower: basic, elemental, crowned elemental
 	if towerNode.colorType == "white":
 		towerNode.colorType = elementArray[randi() % 3]
+		towerNode.bulletDmg += 1
+		towerNode.bulletSpd += 50
 		towerNode.modulate_color()
 	elif towerNode.get_node("Sprite").frame > 0: # not crowned yet
 		towerNode.get_node("Sprite").frame = 0
+		towerNode.bulletDmg += 1
+		towerNode.bulletSpd += 100
 	else: #pick another tower
 		new_tower()
 		
