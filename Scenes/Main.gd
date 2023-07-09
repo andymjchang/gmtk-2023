@@ -6,6 +6,7 @@ var enemyHP := 10
 var playerGold := 100
 var currentWave := 0
 var totalWaves := 15
+onready var trackID = get_node("Track1")
 
 func _ready():
 	randomize()
@@ -41,26 +42,28 @@ func upgrade_tower(towerNode):
 	print(towerNode.name + "dmg + 1")
 	towerNode.bulletDmg += 1
 
-func place_unit(track, p_cost):
+func place_unit(p_cost):
 	if playerGold >= p_cost:
-		track.add_child(unitScene.instance())
+		trackID.add_child(unitScene.instance())
 		playerGold -= p_cost
 		
 func _on_WaveTimer_timeout():
 	new_wave()
 
 func _on_RatButton1_pressed():
-	place_unit($Track1, 50)
+	place_unit(50)
 func _on_RatButton2_pressed():
-	place_unit($Track1, 150)
+	place_unit(150)
 func _on_RatBuutton3_pressed():
-	place_unit($Track1, 150)
+	place_unit(150)
 func _on_RatButton4_pressed():
-	place_unit($Track1, 150)
+	place_unit(150)
 
 func _on_ToggleArea2D_input_event(_viewport, _event, _shape_idx):
 	if Input.is_action_just_pressed("mouse_left"):
 		if toggleNode.frame == 0:
 			toggleNode.frame = 1
+			trackID = get_node("Track2")
 		else: 
 			toggleNode.frame = 0
+			trackID = get_node("Track1")

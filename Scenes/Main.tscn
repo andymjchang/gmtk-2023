@@ -9,22 +9,20 @@
 [ext_resource path="res://Assets/placeholder_object2.png" type="Texture" id=7]
 [ext_resource path="res://Resources/default_font.tres" type="DynamicFont" id=8]
 [ext_resource path="res://Assets/toggle.png" type="Texture" id=9]
+[ext_resource path="res://Assets/rat_nest.png" type="Texture" id=10]
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 7.5, 14.5 )
 
 [sub_resource type="Curve2D" id=1]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 157, 2, 0, 0, 0, 0, 156, 44, 0, 0, 0, 0, 95, 44, 0, 0, 0, 0, 96, 107, 0, 0, 0, 0, 85, 125, 0, 0, 0, 0, 83, 142, 0, 0, 0, 0, 84, 156, 0, 0, 0, 0, 88, 169, 0, 0, 0, 0, 93, 180, 0, 0, 0, 0, 102, 192, 0, 0, 0, 0, 116, 204, 0, 0, 0, 0, 132, 216, 0, 0, 0, 0, 153, 221, 0, 0, 0, 0, 178, 223, 0, 0, 0, 0, 201, 215, 0, 0, 0, 0, 217, 202, 0, 0, 0, 0, 226, 185, 0, 0, 0, 0, 228, 166, 0, 0, 0, 0, 230, 147, 0, 0, 0, 0, 228, 126, 0, 0, 0, 0, 221, 112, 0, 0, 0, 0, 214, 98, 0, 0, 0, 0, 215, 80, 0, 0, 0, 0, 215, 63, 0, 0, 0, 0, 215, 1 )
+"points": PoolVector2Array( 0, 0, 0, 0, 156, 11, 0, 0, 0, 0, 156, 44, 0, 0, 0, 0, 95, 44, 0, 0, 0, 0, 96, 109, 0, 0, 0, 0, 89, 124, 0, 0, 0, 0, 85, 141, 0, 0, 0, 0, 85, 155, 0, 0, 0, 0, 88, 169, 0, 0, 0, 0, 93, 180, 0, 0, 0, 0, 101, 198, 0, 0, 0, 0, 115, 211, 0, 0, 0, 0, 132, 223, 0, 0, 0, 0, 155, 230, 0, 0, 0, 0, 180, 226, 0, 0, 0, 0, 201, 215, 0, 0, 0, 0, 217, 202, 0, 0, 0, 0, 226, 185, 0, 0, 0, 0, 228, 166, 0, 0, 0, 0, 230, 147, 0, 0, 0, 0, 228, 126, 0, 0, 0, 0, 221, 112, 0, 0, 0, 0, 215, 98, 0, 0, 0, 0, 215, 80, 0, 0, 0, 0, 215, 63, 0, 0, 0, 0, 215, 0 )
 }
 
 [sub_resource type="Curve2D" id=2]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 141, 300, 0, 0, 0, 0, 141, 269, 0, 0, 0, 0, 208, 269, 0, 0, 0, 0, 209, 209, 0, 0, 0, 0, 222, 194, 0, 0, 0, 0, 227, 179, 0, 0, 0, 0, 230, 158, 0, 0, 0, 0, 230, 139, 0, 0, 0, 0, 227, 122, 0, 0, 0, 0, 218, 109, 0, 0, 0, 0, 209, 99, 0, 0, 0, 0, 196, 91, 0, 0, 0, 0, 178, 86, 0, 0, 0, 0, 161, 83, 0, 0, 0, 0, 140, 83, 0, 0, 0, 0, 126, 87, 0, 0, 0, 0, 108, 96, 0, 0, 0, 0, 99, 104, 0, 0, 0, 0, 90, 114, 0, 0, 0, 0, 85, 124, 0, 0, 0, 0, 84, 143, 0, 0, 0, 0, 85, 159, 0, 0, 0, 0, 88, 173, 0, 0, 0, 0, 89, 191, 0, 0, 0, 0, 88, 201, 0, 0, 0, 0, 87, 285, 0, 0, 0, 0, 84, 292 )
+"points": PoolVector2Array( 0, 0, 0, 0, 141, 290, 0, 0, 0, 0, 141, 269, 0, 0, 0, 0, 207, 269, 0, 0, 0, 0, 207, 209, 0, 0, 0, 0, 222, 194, 0, 0, 0, 0, 227, 179, 0, 0, 0, 0, 230, 158, 0, 0, 0, 0, 230, 139, 0, 0, 0, 0, 227, 122, 0, 0, 0, 0, 221, 109, 0, 0, 0, 0, 210, 98, 0, 0, 0, 0, 198, 88, 0, 0, 0, 0, 181, 80, 0, 0, 0, 0, 163, 77, 0, 0, 0, 0, 141, 79, 0, 0, 0, 0, 126, 86, 0, 0, 0, 0, 108, 96, 0, 0, 0, 0, 99, 104, 0, 0, 0, 0, 92, 116, 0, 0, 0, 0, 87, 126, 0, 0, 0, 0, 84, 143, 0, 0, 0, 0, 85, 159, 0, 0, 0, 0, 88, 173, 0, 0, 0, 0, 89, 191, 0, 0, 0, 0, 88, 201, 0, 0, 0, 0, 87, 300 )
 }
-
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 50, 50 )
 
 [node name="Main" type="Node2D" groups=["MainNode"]]
 position = Vector2( 50, 0 )
@@ -39,6 +37,15 @@ centered = false
 [node name="PlaceholderBg" type="Sprite" parent="."]
 texture = ExtResource( 3 )
 centered = false
+
+[node name="RatNest" type="Sprite" parent="PlaceholderBg"]
+position = Vector2( 141, 283 )
+texture = ExtResource( 10 )
+
+[node name="RatNest2" type="Sprite" parent="PlaceholderBg"]
+position = Vector2( 155, 4 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 10 )
 
 [node name="PlacementDetectorGroup" type="Node2D" parent="."]
 
@@ -133,8 +140,8 @@ margin_bottom = 67.5
 mouse_filter = 2
 custom_fonts/normal_font = ExtResource( 8 )
 bbcode_enabled = true
-bbcode_text = "[center]TRACK1[center]"
-text = "TRACK1"
+bbcode_text = "[center]NEST1[center]"
+text = "NEST1"
 
 [node name="Track2Label" type="RichTextLabel" parent="PlacementDetectorGroup/Toggle"]
 margin_left = -34.5
@@ -144,8 +151,8 @@ margin_bottom = 105.5
 mouse_filter = 2
 custom_fonts/normal_font = ExtResource( 8 )
 bbcode_enabled = true
-bbcode_text = "[center]TRACK2[center]"
-text = "TRACK2"
+bbcode_text = "[center]NEST2[center]"
+text = "NEST2"
 
 [node name="ToggleArea2D" type="Area2D" parent="PlacementDetectorGroup/Toggle"]
 
@@ -157,43 +164,43 @@ shape = SubResource( 3 )
 
 [node name="PrefabTest" parent="EnemyUnits" instance=ExtResource( 2 )]
 visible = false
-position = Vector2( 65, 139 )
+position = Vector2( 59, 139 )
 
 [node name="PrefabTest2" parent="EnemyUnits" instance=ExtResource( 2 )]
 visible = false
-position = Vector2( 251, 144 )
+position = Vector2( 258, 144 )
 
 [node name="PrefabTest3" parent="EnemyUnits" instance=ExtResource( 2 )]
 visible = false
-position = Vector2( 118, 106 )
+position = Vector2( 121, 106 )
 
 [node name="PrefabTest4" parent="EnemyUnits" instance=ExtResource( 2 )]
 visible = false
-position = Vector2( 195, 183 )
+position = Vector2( 191, 182 )
 
 [node name="PrefabTest5" parent="EnemyUnits" instance=ExtResource( 2 )]
 visible = false
-position = Vector2( 190, 229 )
+position = Vector2( 188, 233 )
 
 [node name="PrefabTest6" parent="EnemyUnits" instance=ExtResource( 2 )]
 visible = false
-position = Vector2( 105, 210 )
+position = Vector2( 106, 222 )
 
 [node name="PrefabTest7" parent="EnemyUnits" instance=ExtResource( 2 )]
 visible = false
-position = Vector2( 229, 207 )
+position = Vector2( 230, 208 )
 
 [node name="PrefabTest8" parent="EnemyUnits" instance=ExtResource( 2 )]
 visible = false
-position = Vector2( 197, 61 )
+position = Vector2( 197, 52 )
 
 [node name="PrefabTest9" parent="EnemyUnits" instance=ExtResource( 2 )]
 visible = false
-position = Vector2( 233, 81 )
+position = Vector2( 237, 81 )
 
 [node name="PrefabTest10" parent="EnemyUnits" instance=ExtResource( 2 )]
 visible = false
-position = Vector2( 114, 58 )
+position = Vector2( 118, 53 )
 
 [node name="Track1" type="Path2D" parent="."]
 curve = SubResource( 1 )
@@ -212,10 +219,6 @@ text = "HP:10"
 [node name="WaveTimer" type="Timer" parent="."]
 wait_time = 10.0
 autostart = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 3, 148 )
-shape = SubResource( 4 )
 
 [connection signal="pressed" from="PlacementDetectorGroup/RatButton1" to="." method="_on_RatButton1_pressed"]
 [connection signal="pressed" from="PlacementDetectorGroup/RatButton2" to="." method="_on_RatButton2_pressed"]
