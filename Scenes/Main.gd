@@ -24,7 +24,7 @@ func update_stats():
 	$HPLabel.text = "HP:" + str(enemyHP)
 	$RichTextLabel.text = "GOLD:" + str(playerGold)
 	$RichTextLabel.text = $RichTextLabel.text + "\nWAVE:" + str(currentWave) + "/" + str(totalWaves)
-	$RichTextLabel.text = $RichTextLabel.text + "\nNEXT:" + str($WaveTimer.time_left)
+	$RichTextLabel.text = $RichTextLabel.text + "\nNEXT WAVE:" + str(round($WaveTimer.time_left))
 
 func update_hp(subtractAmount):
 	enemyHP -= subtractAmount
@@ -64,24 +64,24 @@ func upgrade_tower(towerNode):
 		new_tower()
 		
 
-func place_unit(p_cost, p_color):
+func place_unit(p_cost, p_color, p_dmg, p_hp):
 	if playerGold >= p_cost:
 		var child = unitScene.instance()
 		trackID.add_child(child)
-		child.get_node("PlayerUnit").initialize(p_color, 1, 30)
+		child.get_node("PlayerUnit").initialize(p_color, p_dmg, 30, p_hp)
 		playerGold -= p_cost
 		
 func _on_WaveTimer_timeout():
 	new_wave()
 
 func _on_RatButton1_pressed():
-	place_unit(50, "white")
+	place_unit(50, "white", ratDmg[0], ratHp[0])
 func _on_RatButton2_pressed():
-	place_unit(150, "green")
+	place_unit(150, "green", ratDmg[1], ratHp[1])
 func _on_RatBuutton3_pressed():
-	place_unit(150, "blue")
+	place_unit(150, "blue", ratDmg[2], ratHp[2])
 func _on_RatButton4_pressed():
-	place_unit(150, "red")
+	place_unit(150, "red", ratDmg[3], ratHp[3])
 
 func _on_ToggleArea2D_input_event(_viewport, _event, _shape_idx):
 	if Input.is_action_just_pressed("mouse_left"):
@@ -95,7 +95,7 @@ func _on_ToggleArea2D_input_event(_viewport, _event, _shape_idx):
 
 
 func _on_ToggleArea2D_mouse_entered():
-	$UnitPortrait.load_info("rat", "Toggle between spawn locations", 0)
+	$UnitPortrait.load_info("nest", "Toggle between spawn locations", 0)
 
 func _on_Area2D_mouse_entered_white():
 	$UnitPortrait.load_info("rat", "Wind Rat", ratDmg[0]) 
